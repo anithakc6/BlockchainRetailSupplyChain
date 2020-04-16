@@ -1,0 +1,247 @@
+<html>
+
+<head>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/app.js"></script>
+    
+    <!-- Bootstrap -->
+
+	<style>
+	body{
+		background: url('http://www.allwhitebackground.com/images/6/Beautiful-Powerpoint-Background-Pictures.jpg');
+		background-size: 100% 100%;
+	}
+	.center-div{
+		text-align: left;
+	}
+	table, th, td {
+		border: 0.1px solid black;
+	}
+	
+	</style>
+	
+</head>
+<body>
+<h1 style="color: #2e6c80;"><span style="color: #800000;"><strong>Tracking of Products:</strong></span></h1>
+<p style="text-align: center;">&nbsp;</p>
+<table style="margin-left: auto; margin-right: auto;">
+<tbody>
+<tr>
+<td style="width: 255.2px;" colspan="3">
+<h1 style="text-align: center;"><span style="color: #993366;"><img src="Manufacturer-Distributer-Retailer.jpg" alt="" /></span></h1>
+</td>
+</tr>
+<tr>
+<td style="width: 255.2px;">
+<table style="margin-left: auto; margin-right: auto;">
+<tbody>
+<tr>
+<td style="width: 245.6px;" colspan="2">
+<h1 style="text-align: center;"><span style="color: #993366;"> Manufacturer </span></h1>
+</td>
+</tr>
+<tr>
+<td style="width: 79.2px; text-align: center;"><label for="productIDM"> Product ID </label></td>
+<td style="width: 160.8px;"><input id="productIDM" name="productIDM" type="text" /></td>
+</tr>
+<tr>
+<td style="width: 79.2px; text-align: center;"><label for="productM"> Product</label></td>
+<td style="width: 160.8px;"><input id="productM" name="productM" type="text" /></td>
+</tr>
+<tr>
+<td style="width: 79.2px; text-align: center;"><label for="brandM">Brand</label></td>
+<td style="width: 160.8px;"><input id="brandM" name="brandM" type="text" /></td>
+</tr>
+<tr>
+<td style="width: 79.2px; text-align: center;"><label for="locationM">Location</label></td>
+<td style="width: 160.8px;"><input id="locationM" name="locationM" type="text" /></td>
+</tr>
+<tr>
+<td style="width: 245.6px; text-align: center;" colspan="2"><button class="btn btn-default btn-manufacturer" title="Ensure Metamask address as 0xcB41A24...a7a4" style="background-color: green; color: white;" type="button" data-id="0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Create Product &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</button>&nbsp;</td>
+</tr>
+<tr>
+<td style="width: 79.2px; text-align: center;"><label for="tAgency">Transport Agency</label></td>
+<td style="width: 164px;"><input id="tAgency" name="tAgency" type="text" /></td>
+</tr>
+<tr>
+<td style="width: 79.2px; text-align: center;"><label for="destAddr">Destination Address</label></td>
+<td style="width: 164px;"><input id="destAddr" name="destAddr" type="text" /></td>
+</tr>
+<tr>
+<td style="width: 248.8px; text-align: center;" colspan="2"><button class="btn btn-default btn-shipM" title="Ensure Metamask address as 0xcB41A24...a7a4" style="background-color: green; color: white;" type="button" data-id="0">&nbsp;Ship Product&nbsp;</button></td>
+</tr>
+</tbody>
+</table>
+</td>
+<td style="width: 255.2px;">
+<table style="height: 215px;" width="252">
+<tbody>
+<tr>
+<td style="width: 246.4px; text-align: center;" colspan="2">
+<h1 style="text-align: center;"><span style="color: #0000ff;"><span style="color: #993366;">Distributer</span><strong>&nbsp;</strong></span></h1>
+</td>
+</tr>
+<tr>
+<td style="width: 80px; text-align: center;"><label for="productIDD">Product ID</label></td>
+<td style="width: 160.8px;"><input id="productIDD" name="productIDD" type="text" /></td>
+</tr>
+<tr>
+<td style="width: 80px; text-align: center;"><label for="transportD">Transport Agency</label></td>
+<td style="width: 160.8px;"><input id="transportD" name="transportD" type="text" /></td>
+</tr>
+<tr>
+<td style="width: 80px; text-align: center;"><label for="destAddrD">Destination Address</label></td>
+<td style="width: 160.8px;"><input id="destAddrD" name="destAddrD" type="text" /></td>
+</tr>
+<tr>
+<td style="width: 80px;">&nbsp;</td>
+<td style="width: 160.8px;">&nbsp;</td>
+</tr>
+<tr>
+<td style="width: 246.4px; text-align: center;" colspan="2"><button class="btn btn-default btn-distributer" title="Ensure Metamask address as 0x8c24E5e...4b04" style="background-color: green; color: white;" type="button" data-id="0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Ship Product&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</button>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td style="width: 228.8px;">
+<table>
+<tbody>
+<tr>
+<td style="width: 245.6px; text-align: center;" colspan="2">
+<h1><span style="color: #993366;">Retailer</span></h1>
+</td>
+</tr>
+<tr>
+<td style="width: 79.2px; text-align: center;"><label for="productIDRT">Product ID</label></td>
+<td style="width: 160.8px;"><input id="productIDRT" name="productIDRT" type="text" /></td>
+</tr>
+<tr>
+<td style="width: 245.6px; text-align: center;" colspan="2"><button class="btn btn-default btn-retailTracking" title="Ensure Metamask address as 0x27AE28a5...74CB" style="background-color: green; color: white;" type="button" data-id="0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Product Tracking Details&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</button>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td style="width: 255.2px;" colspan="3">
+<h1 style="text-align: center;"><span style="color: #993366;"><img src="Retail-Customer.jpg" alt="" /></span></h1>
+</td>
+</tr>
+<tr>
+<td style="width: 255.2px;">
+<table width="252">
+<tbody>
+<tr>
+<td colspan="2">
+<h1 style="text-align: center;"><span style="color: #993366;">Retailer<strong>&nbsp;</strong></span></h1>
+</td>
+</tr>
+<tr style="text-align: center;">
+<td><label for="productIDR">Product ID</label></td>
+<td><input id="productIDR" name="productIDR" type="text" /></td>
+</tr>
+<tr style="text-align: center;">
+<td><label for="transportR">Transport Agency</label></td>
+<td><input id="transportR" name="transportR" type="text" /></td>
+</tr>
+<tr style="text-align: center;">
+<td><label for="destAddrR">Destination Address</label></td>
+<td><input id="destAddrR" name="destAddrR" type="text" /></td>
+</tr>
+<tr style="text-align: center;">
+<td><label for="priceR">Price</label></td>
+<td style="width: 160.8px;"><input id="priceR" name="priceR" type="text" /></td>
+</tr>
+<tr style="text-align: center;">
+<td colspan="2"><button class="btn btn-default btn-retailer" title="Ensure Metamask address as 0x27AE28a5...74CB" style="background-color: green; color: white;" type="button" data-id="0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Sell Product&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</button>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td style="width: 255.2px; text-align: center;">&nbsp;
+<h1><span style="color: #993366;">Transport Agent At Destination</span></h1>
+<table width="254">
+<tbody>
+<tr>
+<td style="width: 79.2px;"><label for="productIDC">Product ID</label></td>
+<td style="width: 160.8px;"><input id="productIDC" name="productIDC" type="text" /></td>
+</tr>
+<tr style="text-align: center;">
+<td><label for="destAddrC">Address</label></td>
+<td><input id="destAddrC" name="destAddrC" type="text" /></td>
+</tr>
+<tr>
+<td style="width: 245.6px;" colspan="2"><button class="btn btn-default btn-customer" style="background-color: green; color: white;" type="button" data-id="0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Update Track info&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</button>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td style="width: 228.8px; text-align: center;">
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h1><span style="color: #993366;">Customer</span></h1>
+<table width="254">
+<tbody>
+<tr>
+<td><label for="productIDCT">Product ID</label></td>
+<td><input id="productIDCT" name="productIDCT" type="text" /></td>
+</tr>
+<tr>
+<td colspan="2"><button class="btn btn-default btn-customerTracking" style="background-color: green; color: white;" type="button" data-id="0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Product Tracking &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</button>&nbsp;</td>
+</tr>
+<tr>
+<td><label for="amount">Amount</label></td>
+<td><input id="amount" name="amount" type="text" /></td>
+</tr>
+<tr>
+<td style="text-align: center;" colspan="2"><button class="btn btn-default btn-buy" title="Ensure any different Metamask address as customer" style="background-color: green; color: white;" type="button" data-id="0">&nbsp;Pay&nbsp;</button></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: center;">&nbsp;</p>
+<p style="text-align: center;">&nbsp;</p>
+<table id="posts" style="height: 67px; float: left;" width="562" align="center">
+<tbody>
+<tr>
+<th id="test" style="width: 139.2px; text-align: center;"><span style="color: #808000;">Owner</span></th>
+<th style="width: 88.8px; text-align: center;"><span style="color: #808000;">Product ID</span></th>
+<th style="width: 177.6px; text-align: center;"><span style="color: #808000;">Tx Hash</span></th>
+<th style="width: 130.4px; text-align: center;"><span style="color: #808000;">Description</span></th>
+</tr>
+<tr>
+<td id="productID" style="width: 139.2px;">&nbsp;</td>
+<td id="hash" style="width: 88.8px;">&nbsp;</td>
+<td id="nonce" style="width: 177.6px;">&nbsp;</td>
+<td id="from" style="width: 130.4px;">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table id="trackInfo" style="height: 67px; float: right;" width="562" align="center">
+<tbody>
+<tr>
+<th id="test" style="width: 112px; text-align: center;"><span style="color: #993366;">Owner</span></th>
+<th style="width: 144px; text-align: center;"><span style="color: #993366;">Location</span></th>
+<th style="width: 130.4px; text-align: center;"><span style="color: #993366;">Description</span></th>
+<th style="width: 87.2px; text-align: center;"><span style="color: #993366;">Time</span></th>
+</tr>
+<tr>
+<td id="owner" style="width: 139.2px;">&nbsp;</td>
+<td id="location" style="width: 88.8px;">&nbsp;</td>
+<td id="description" style="width: 177.6px;">&nbsp;</td>
+<td id="time" style="width: 130.4px;">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: center;">&nbsp;</p>
+</body>
+</html>
